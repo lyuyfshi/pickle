@@ -1,5 +1,6 @@
 language: ruby
 dist: xenial
+sudo: false
 cache: bundler
 rvm:
   - 2.5.1
@@ -12,7 +13,10 @@ matrix:
     - rvm: ruby-head
   fast_finish: true
 
-script:
-  - gem install bundler
-  - bundle exec rake spec
-  - bundle exec rake cucumber
+script: bundle exec rspec -f progress --force-color --color --tty
+
+gemfile:
+  - gemfiles/cucumber1.gemfile
+  - gemfiles/cucumber2.gemfile
+  - gemfiles/cucumber3.gemfile
+  - gemfiles/cucumber4.gemfile

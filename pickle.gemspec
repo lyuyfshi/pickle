@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
   
-  s.add_dependency "cucumber", ">=0.8", "< 4.0"
+  s.add_dependency "cucumber", ">=0.8", "< 5.0"
   s.add_dependency "rake"
    
   s.add_development_dependency "rack"
